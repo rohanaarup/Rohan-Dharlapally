@@ -1,0 +1,278 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="100%" height="480" style="background: transparent;">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="orbitBg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#141923"/>
+      <stop offset="60%" stop-color="#0E1217"/>
+      <stop offset="100%" stop-color="#0A0D12"/>
+    </radialGradient>
+
+    <!-- Core Hub Gradient -->
+    <linearGradient id="hubBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="50%" stop-color="#FFA07A"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+
+    <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF6B35" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#8B5CF6" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0E1217" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Grid pattern -->
+    <pattern id="orbitGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="0.75" fill="#30363D" opacity="0.35"/>
+    </pattern>
+
+    <!-- Node Badge Shadow -->
+    <filter id="badgeShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseCore {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.06); opacity: 1; }
+    }
+    .core-pulse {
+      animation: pulseCore 3s ease-in-out infinite;
+      transform-origin: 450px 240px;
+    }
+    .font-sans {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .font-mono {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    }
+  </style>
+
+  <!-- Canvas Container -->
+  <rect x="2" y="2" width="916" height="476" rx="14" fill="url(#orbitBg)"/>
+  <rect x="2" y="2" width="916" height="476" rx="14" fill="url(#orbitGrid)"/>
+  <rect x="2" y="2" width="916" height="476" rx="14" fill="none" stroke="#21262D" stroke-width="1.2"/>
+
+  <!-- Orbit Header Information -->
+  <g transform="translate(40, 36)">
+    <rect x="0" y="0" width="280" height="24" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+    <circle cx="12" cy="12" r="3.5" fill="#FF6B35"/>
+    <text x="24" y="16" fill="#C9D1D9" font-size="10.5" class="font-mono" font-weight="600" letter-spacing="1">TECHNOLOGY ORBITAL MATRIX</text>
+  </g>
+  <text x="40" y="80" fill="#F0F6FC" font-size="20" class="font-sans" font-weight="700">Core Engineering Ecosystem</text>
+  <text x="40" y="98" fill="#8B949E" font-size="12" class="font-sans">Synchronized multi-tier stack revolving around backend &amp; full-stack architecture</text>
+
+  <!-- Legend in Top-Right -->
+  <g transform="translate(640, 36)">
+    <rect x="0" y="0" width="240" height="48" rx="8" fill="#161B22" stroke="#21262D" stroke-width="1"/>
+    <circle cx="18" cy="16" r="4" fill="#FF6B35"/>
+    <text x="28" y="19" fill="#C9D1D9" font-size="11" class="font-mono">INNER: Primary Core Stack</text>
+    <circle cx="18" cy="34" r="4" fill="#8B5CF6"/>
+    <text x="28" y="37" fill="#C9D1D9" font-size="11" class="font-mono">OUTER: Multi-Client &amp; DevOps</text>
+  </g>
+
+  <!-- Ambient Glow Behind Core -->
+  <circle cx="450" cy="240" r="170" fill="url(#hubGlow)"/>
+
+  <!-- Track 1: Outer Orbit Line -->
+  <circle cx="450" cy="240" r="200" fill="none" stroke="#21262D" stroke-width="1.2" stroke-dasharray="6,8"/>
+  <!-- Track 2: Inner Orbit Line -->
+  <circle cx="450" cy="240" r="120" fill="none" stroke="#30363D" stroke-width="1.2" stroke-dasharray="4,6"/>
+
+  <!-- ==================== OUTER ORBIT GROUP ==================== -->
+  <!-- Rotates CCW (-360 deg) around center (450, 240) -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 450 240" to="-360 450 240" dur="38s" repeatCount="indefinite"/>
+
+    <!-- React Node -->
+    <g transform="translate(650.00, 240.00)">
+      <animateTransform attributeName="transform" type="rotate" from="0 650.00 240.00" to="360 650.00 240.00" dur="38s" repeatCount="indefinite"/>
+      <!-- Circular Badge Frame -->
+      <circle cx="0" cy="0" r="22" fill="#161B22" stroke="#30363D" stroke-width="1.5" filter="url(#badgeShadow)"/>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#61DAFB" stroke-width="1" stroke-opacity="0.4"/>
+      <!-- Logo Vector -->
+      
+      <g transform="translate(-13, -13) scale(1.08)">
+        <circle cx="12" cy="12" r="2.2" fill="#61DAFB"/>
+        <ellipse cx="12" cy="12" rx="10" ry="3.8" fill="none" stroke="#61DAFB" stroke-width="1.3"/>
+        <ellipse cx="12" cy="12" rx="10" ry="3.8" fill="none" stroke="#61DAFB" stroke-width="1.3" transform="rotate(60 12 12)"/>
+        <ellipse cx="12" cy="12" rx="10" ry="3.8" fill="none" stroke="#61DAFB" stroke-width="1.3" transform="rotate(120 12 12)"/>
+      </g>
+    
+      <!-- Label -->
+      <rect x="-35" y="25" width="70" height="15" rx="3" fill="#0D1117" opacity="0.85"/>
+      <text x="0" y="36" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-sans" font-weight="600">React</text>
+    </g>
+
+    <!-- Flutter Node -->
+    <g transform="translate(511.80, 430.21)">
+      <animateTransform attributeName="transform" type="rotate" from="0 511.80 430.21" to="360 511.80 430.21" dur="38s" repeatCount="indefinite"/>
+      <!-- Circular Badge Frame -->
+      <circle cx="0" cy="0" r="22" fill="#161B22" stroke="#30363D" stroke-width="1.5" filter="url(#badgeShadow)"/>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#02569B" stroke-width="1" stroke-opacity="0.4"/>
+      <!-- Logo Vector -->
+      
+      <g transform="translate(-13, -13) scale(1.08)">
+        <path d="M14.3 2L3.5 12.8l3.4 3.4L21.1 2H14.3z" fill="#02569B"/>
+        <path d="M14.3 11.6L7.8 18.1l3.4 3.4 3.1-3.1 5.2-5.1h-5.2z" fill="#0175C2"/>
+        <path d="M11.2 21.5l3.1 3.1 6.8-6.8-3.1-3.1-6.8 6.8z" fill="#29B6F6"/>
+        <path d="M14.3 18.1l3.4-3.4 3.4 3.4-3.4 3.4-3.4-3.4z" fill="#13B9FD"/>
+      </g>
+    
+      <!-- Label -->
+      <rect x="-35" y="25" width="70" height="15" rx="3" fill="#0D1117" opacity="0.85"/>
+      <text x="0" y="36" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-sans" font-weight="600">Flutter</text>
+    </g>
+
+    <!-- TypeScript Node -->
+    <g transform="translate(288.20, 357.56)">
+      <animateTransform attributeName="transform" type="rotate" from="0 288.20 357.56" to="360 288.20 357.56" dur="38s" repeatCount="indefinite"/>
+      <!-- Circular Badge Frame -->
+      <circle cx="0" cy="0" r="22" fill="#161B22" stroke="#30363D" stroke-width="1.5" filter="url(#badgeShadow)"/>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#3178C6" stroke-width="1" stroke-opacity="0.4"/>
+      <!-- Logo Vector -->
+      
+      <g transform="translate(-13, -13)">
+        <rect width="26" height="26" rx="5" fill="#3178C6"/>
+        <path d="M6 11.2h6.5v1.6h-2.4v7.4H8.4v-7.4H6v-1.6zm7.8 7.3c.7.5 1.5.8 2.5.8 1.4 0 2.3-.7 2.3-1.8 0-1.2-.9-1.6-2.1-2l-.7-.2c-1.5-.5-2.5-1.2-2.5-2.7 0-1.7 1.4-3 3.4-3 1.1 0 1.9.3 2.7.9l-.7 1.5c-.6-.4-1.4-.8-2.1-.8-1.1 0-1.7.6-1.7 1.5 0 1 .8 1.4 1.9 1.8l.8.3c1.7.6 2.6 1.4 2.6 2.9 0 1.9-1.5 3.1-3.7 3.1-1.3 0-2.4-.4-3.1-1.1l.6-1.6z" fill="#FFFFFF"/>
+      </g>
+    
+      <!-- Label -->
+      <rect x="-35" y="25" width="70" height="15" rx="3" fill="#0D1117" opacity="0.85"/>
+      <text x="0" y="36" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-sans" font-weight="600">TypeScript</text>
+    </g>
+
+    <!-- Docker Node -->
+    <g transform="translate(288.20, 122.44)">
+      <animateTransform attributeName="transform" type="rotate" from="0 288.20 122.44" to="360 288.20 122.44" dur="38s" repeatCount="indefinite"/>
+      <!-- Circular Badge Frame -->
+      <circle cx="0" cy="0" r="22" fill="#161B22" stroke="#30363D" stroke-width="1.5" filter="url(#badgeShadow)"/>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#2496ED" stroke-width="1" stroke-opacity="0.4"/>
+      <!-- Logo Vector -->
+      
+      <g transform="translate(-13, -13) scale(1.08)">
+        <path d="M2.5 13.5c.3 3.6 3 6.5 6.6 6.9 4.3.5 8.2-1.9 9.8-5.7.5-.1 1.7-.3 2.3.3.4.4.5 1 .5 1s.8-.8 1.1-1.6c.3-.8.2-1.7-.1-2.2-.6-.9-1.8-.9-2.3-.8-.3-.8-.9-1.5-1.6-1.9l-.7-.4-.4.7c-.5 1-1.4 1.7-2.5 1.9-1.1.2-4.9.2-6.5.2-1.2 0-3.4-.1-4.7 1.1-.5.5-.9 1.1-1.5 1.5zm10.7-3.7h2.2v1.9h-2.2V9.8zm-2.8 0h2.2v1.9h-2.2V9.8zm-2.8 0h2.2v1.9H7.6V9.8zm5.6-2.5h2.2v1.9h-2.2V7.3zm-2.8 0h2.2v1.9h-2.2V7.3zm-2.8 0h2.2v1.9H7.6V7.3zm-2.8 0h2.2v1.9H4.8V7.3z" fill="#2496ED"/>
+      </g>
+    
+      <!-- Label -->
+      <rect x="-35" y="25" width="70" height="15" rx="3" fill="#0D1117" opacity="0.85"/>
+      <text x="0" y="36" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-sans" font-weight="600">Docker</text>
+    </g>
+
+    <!-- Git Node -->
+    <g transform="translate(511.80, 49.79)">
+      <animateTransform attributeName="transform" type="rotate" from="0 511.80 49.79" to="360 511.80 49.79" dur="38s" repeatCount="indefinite"/>
+      <!-- Circular Badge Frame -->
+      <circle cx="0" cy="0" r="22" fill="#161B22" stroke="#30363D" stroke-width="1.5" filter="url(#badgeShadow)"/>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#F05032" stroke-width="1" stroke-opacity="0.4"/>
+      <!-- Logo Vector -->
+      
+      <g transform="translate(-13, -13) scale(1.08)">
+        <path d="M23.5 10.9L13.1.5a1.5 1.5 0 0 0-2.2 0L8.7 2.6l3.2 3.2a1.8 1.8 0 0 1 2.3 2.3l3 3a1.8 1.8 0 0 1 1.7 3 1.8 1.8 0 0 1-2.6-2.6l-2.9-2.9v6.6a1.8 1.8 0 0 1 .5 1.3 1.8 1.8 0 0 1-3.6 0 1.8 1.8 0 0 1 1-1.6v-6.7a1.8 1.8 0 0 1-1-1.6c0-.6.3-1.2.8-1.5L8 4.4.5 12a1.5 1.5 0 0 0 0 2.2l10.5 10.5c.6.6 1.6.6 2.2 0l10.4-10.4a1.5 1.5 0 0 0-.1-2.4z" fill="#F05032"/>
+      </g>
+    
+      <!-- Label -->
+      <rect x="-35" y="25" width="70" height="15" rx="3" fill="#0D1117" opacity="0.85"/>
+      <text x="0" y="36" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-sans" font-weight="600">Git</text>
+    </g>
+
+  </g>
+
+  <!-- ==================== INNER ORBIT GROUP ==================== -->
+  <!-- Rotates CW (+360 deg) around center (450, 240) -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 450 240" to="360 450 240" dur="28s" repeatCount="indefinite"/>
+
+    <!-- Python Node -->
+    <g transform="translate(570.00, 240.00)">
+      <animateTransform attributeName="transform" type="rotate" from="0 570.00 240.00" to="-360 570.00 240.00" dur="28s" repeatCount="indefinite"/>
+      <!-- Circular Badge Frame -->
+      <circle cx="0" cy="0" r="22" fill="#161B22" stroke="#30363D" stroke-width="1.5" filter="url(#badgeShadow)"/>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#3776AB" stroke-width="1" stroke-opacity="0.5"/>
+      <!-- Logo Vector -->
+      
+      <g transform="translate(-13, -13) scale(1.08)">
+        <path d="M12 2C6.48 2 6.8 4.4 6.8 4.4L6.81 6.88H12.18V8.44H4.55C4.55 8.44 2 8.15 2 13.68C2 19.21 4.23 18.94 4.23 18.94H5.82V16.71C5.82 16.71 5.74 14.05 8.44 14.05H13.68C13.68 14.05 16.27 14.16 16.27 11.66V4.4C16.27 4.4 16.63 2 12 2ZM9.47 3.56C9.97 3.56 10.38 3.97 10.38 4.47C10.38 4.97 9.97 5.38 9.47 5.38C8.97 5.38 8.56 4.97 8.56 4.47C8.56 3.97 8.97 3.56 9.47 3.56Z" fill="#3776AB"/>
+        <path d="M12 22C17.52 22 17.2 19.6 17.2 19.6L17.19 17.12H11.82V15.56H19.45C19.45 15.56 22 15.85 22 10.32C22 4.79 19.77 5.06 19.77 5.06H18.18V7.29C18.18 7.29 18.26 9.95 15.56 9.95H10.32C10.32 9.95 7.73 9.84 7.73 12.34V19.6C7.73 19.6 7.37 22 12 22ZM14.53 20.44C14.03 20.44 13.62 20.03 13.62 19.53C13.62 19.03 14.03 18.62 14.53 18.62C15.03 18.62 15.44 19.03 15.44 19.53C15.44 20.03 15.03 20.44 14.53 20.44Z" fill="#FFD438"/>
+      </g>
+    
+      <!-- Label -->
+      <rect x="-35" y="25" width="70" height="15" rx="3" fill="#0D1117" opacity="0.85"/>
+      <text x="0" y="36" text-anchor="middle" fill="#F0F6FC" font-size="9.5" class="font-sans" font-weight="600">Python</text>
+    </g>
+
+    <!-- Django Node -->
+    <g transform="translate(450.00, 360.00)">
+      <animateTransform attributeName="transform" type="rotate" from="0 450.00 360.00" to="-360 450.00 360.00" dur="28s" repeatCount="indefinite"/>
+      <!-- Circular Badge Frame -->
+      <circle cx="0" cy="0" r="22" fill="#161B22" stroke="#30363D" stroke-width="1.5" filter="url(#badgeShadow)"/>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#092E20" stroke-width="1" stroke-opacity="0.5"/>
+      <!-- Logo Vector -->
+      
+      <g transform="translate(-13, -13)">
+        <rect width="26" height="26" rx="5" fill="#092E20"/>
+        <path d="M6.5 18V7.5h2.2v4.4c.4-.7 1.3-1.2 2.2-1.2 1.9 0 3.2 1.5 3.2 3.7s-1.3 3.7-3.2 3.7c-.9 0-1.8-.5-2.2-1.2V18H6.5zm4.3-2.2c1.1 0 1.7-.8 1.7-2.1s-.6-2.1-1.7-2.1c-1 0-1.7.8-1.7 2.1s.7 2.1 1.7 2.1z" fill="#FFFFFF"/>
+        <path d="M16 18.8c-.9 0-1.5-.4-1.7-1.2l1.5-.6c.1.4.3.5.8.5.5 0 .9-.3.9-1V10.7h1.7v7.2c0 1.9-1.2 2.9-3.2 2.9z" fill="#FFFFFF"/>
+        <circle cx="18.4" cy="8.3" r="1.1" fill="#FFFFFF"/>
+      </g>
+    
+      <!-- Label -->
+      <rect x="-35" y="25" width="70" height="15" rx="3" fill="#0D1117" opacity="0.85"/>
+      <text x="0" y="36" text-anchor="middle" fill="#F0F6FC" font-size="9.5" class="font-sans" font-weight="600">Django</text>
+    </g>
+
+    <!-- PostgreSQL Node -->
+    <g transform="translate(330.00, 240.00)">
+      <animateTransform attributeName="transform" type="rotate" from="0 330.00 240.00" to="-360 330.00 240.00" dur="28s" repeatCount="indefinite"/>
+      <!-- Circular Badge Frame -->
+      <circle cx="0" cy="0" r="22" fill="#161B22" stroke="#30363D" stroke-width="1.5" filter="url(#badgeShadow)"/>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#336791" stroke-width="1" stroke-opacity="0.5"/>
+      <!-- Logo Vector -->
+      
+      <g transform="translate(-13, -13) scale(1.08)">
+        <path d="M17.4 9.1c-.3-.8-.9-1.4-1.7-1.8-.6-.3-1.3-.4-2-.4-.8 0-1.6.2-2.3.6-.5-.6-1.2-1.1-2-1.3-.8-.2-1.6-.1-2.4.2C5.6 7 4.5 8.3 4.1 9.9c-.4 1.6-.2 3.3.6 4.7.7 1.2 1.8 2.1 3.1 2.6.4.1.8.2 1.2.2.3 0 .6-.1.8-.2l.1.5c.2.8.6 1.5 1.2 2 .6.5 1.3.8 2.1.8.7 0 1.4-.2 2-.6.6-.4 1.1-1 1.4-1.7.5-1.1.7-2.3.6-3.5 0-.4 0-.8-.1-1.2 1.1-.3 1.9-1.1 2.4-2.1.5-1 .5-2.2-.1-3.3zm-5.1 4.5c-.3.7-.7 1.3-1.3 1.7-.5.4-1.2.5-1.8.4-.6-.1-1.2-.5-1.6-1-.4-.6-.6-1.3-.5-2 .1-.8.5-1.5 1.1-2 .6-.5 1.4-.7 2.1-.6.7.1 1.4.5 1.8 1.1.4.7.5 1.6.2 2.4zm3.9-2.3c-.3.6-.8 1.1-1.4 1.4.1-.5.1-1 0-1.5-.1-.7-.4-1.3-.8-1.8.3-.3.8-.5 1.3-.4.4.1.7.4.9.8.1.5.1 1 0 1.5z" fill="#336791"/>
+      </g>
+    
+      <!-- Label -->
+      <rect x="-35" y="25" width="70" height="15" rx="3" fill="#0D1117" opacity="0.85"/>
+      <text x="0" y="36" text-anchor="middle" fill="#F0F6FC" font-size="9.5" class="font-sans" font-weight="600">PostgreSQL</text>
+    </g>
+
+    <!-- Redis Node -->
+    <g transform="translate(450.00, 120.00)">
+      <animateTransform attributeName="transform" type="rotate" from="0 450.00 120.00" to="-360 450.00 120.00" dur="28s" repeatCount="indefinite"/>
+      <!-- Circular Badge Frame -->
+      <circle cx="0" cy="0" r="22" fill="#161B22" stroke="#30363D" stroke-width="1.5" filter="url(#badgeShadow)"/>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#DC382D" stroke-width="1" stroke-opacity="0.5"/>
+      <!-- Logo Vector -->
+      
+      <g transform="translate(-13, -13) scale(1.08)">
+        <path d="M12 2.5L2.8 7.3l9.2 4.8 9.2-4.8L12 2.5z" fill="#DC382D"/>
+        <path d="M2.8 8.8v6.4l9.2 4.8v-6.4L2.8 8.8z" fill="#A3241D"/>
+        <path d="M21.2 8.8l-9.2 4.8v6.4l9.2-4.8V8.8z" fill="#E84135"/>
+        <circle cx="12" cy="7.2" r="1.3" fill="#FFFFFF" opacity="0.9"/>
+        <circle cx="7.5" cy="5" r="0.9" fill="#FFFFFF" opacity="0.6"/>
+        <circle cx="16.5" cy="5" r="0.9" fill="#FFFFFF" opacity="0.6"/>
+      </g>
+    
+      <!-- Label -->
+      <rect x="-35" y="25" width="70" height="15" rx="3" fill="#0D1117" opacity="0.85"/>
+      <text x="0" y="36" text-anchor="middle" fill="#F0F6FC" font-size="9.5" class="font-sans" font-weight="600">Redis</text>
+    </g>
+
+  </g>
+
+  <!-- ==================== CENTRAL ENGINEERING CORE HUB ==================== -->
+  <g class="core-pulse">
+    <!-- Outer Decorative Pulse Ring -->
+    <circle cx="450" cy="240" r="48" fill="none" stroke="#FF6B35" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+    <!-- Core Hub Body -->
+    <circle cx="450" cy="240" r="40" fill="#161B22" stroke="url(#hubBorder)" stroke-width="2.5" filter="url(#badgeShadow)"/>
+    <circle cx="450" cy="240" r="34" fill="#0E1217" stroke="#21262D" stroke-width="1"/>
+
+    <!-- Developer Symbol: Monogram & Engineering Brackets -->
+    <text x="450" y="236" text-anchor="middle" fill="#FF6B35" font-size="15" class="font-mono" font-weight="800">&lt;/&gt;</text>
+    <text x="450" y="253" text-anchor="middle" fill="#F0F6FC" font-size="11" class="font-mono" font-weight="700">ROHAN</text>
+    <text x="450" y="264" text-anchor="middle" fill="#8B5CF6" font-size="8.5" class="font-mono" font-weight="600">ARCHITECT</text>
+  </g>
+</svg>

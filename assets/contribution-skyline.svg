@@ -1,0 +1,387 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" width="100%" height="280" style="background: transparent;">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="skylineBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1217"/>
+      <stop offset="60%" stop-color="#12161F"/>
+      <stop offset="100%" stop-color="#0A0D12"/>
+    </linearGradient>
+
+    <!-- Skyline Horizon Glow -->
+    <radialGradient id="horizonGlow" cx="50%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="#FF6B35" stop-opacity="0.18"/>
+      <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#0A0D12" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="skyGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#21262D" stroke-width="0.5" stroke-opacity="0.25"/>
+    </pattern>
+
+    <!-- Beacon filter -->
+    <filter id="cityGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes beamRise {
+      0% { y1: 220px; y2: 200px; opacity: 0; }
+      30% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { y1: 70px; y2: 50px; opacity: 0; }
+    }
+    @keyframes pulseCityDot {
+      0%, 100% { opacity: 0.4; r: 2px; }
+      50% { opacity: 1; r: 3.5px; }
+    }
+    .beam-1 { animation: beamRise 3.5s linear infinite; }
+    .beam-2 { animation: beamRise 4.2s linear infinite; animation-delay: 1.2s; }
+    .beam-3 { animation: beamRise 3.8s linear infinite; animation-delay: 2.1s; }
+    .beam-4 { animation: beamRise 4.5s linear infinite; animation-delay: 0.6s; }
+    .city-dot { animation: pulseCityDot 2.2s infinite ease-in-out; }
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+  </style>
+
+  <!-- Base Canvas -->
+  <rect x="2" y="2" width="916" height="276" rx="14" fill="url(#skylineBg)"/>
+  <rect x="2" y="2" width="916" height="276" rx="14" fill="url(#skyGrid)"/>
+  <rect x="2" y="2" width="916" height="276" rx="14" fill="none" stroke="#21262D" stroke-width="1.2"/>
+
+  <!-- Horizon Ambient Glow -->
+  <circle cx="560" cy="200" r="260" fill="url(#horizonGlow)"/>
+
+  <!-- Header Info -->
+  <g transform="translate(40, 36)">
+    <rect x="0" y="0" width="260" height="24" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+    <circle cx="12" cy="12" r="3.5" fill="#FF6B35"/>
+    <text x="24" y="16" fill="#C9D1D9" font-size="10.5" class="font-mono" font-weight="600" letter-spacing="1">CONTRIBUTION ARCHITECTURE</text>
+  </g>
+  <text x="40" y="78" fill="#F0F6FC" font-size="20" class="font-sans" font-weight="700">Futuristic Contribution Skyline</text>
+  <text x="40" y="96" fill="#8B949E" font-size="12" class="font-sans">Isometric cityscape reflecting commit velocity, codebase evolution, and system stability</text>
+
+  <!-- Left Stats / Spec Legend -->
+  <g transform="translate(40, 130)">
+    <rect x="0" y="0" width="220" height="110" rx="8" fill="#161B22" stroke="#21262D" stroke-width="1"/>
+    <text x="16" y="24" fill="#FF8E53" font-size="10.5" class="font-mono" font-weight="700">NODE METRICS</text>
+
+    <text x="16" y="48" fill="#8B949E" font-size="10.5" class="font-sans">Architecture</text>
+    <text x="120" y="48" fill="#F0F6FC" font-size="10.5" class="font-mono">3D ISOMETRIC</text>
+
+    <text x="16" y="70" fill="#8B949E" font-size="10.5" class="font-sans">Peak Nodes</text>
+    <text x="120" y="70" fill="#FF8E53" font-size="10.5" class="font-mono">BURNT ORANGE</text>
+
+    <text x="16" y="92" fill="#8B949E" font-size="10.5" class="font-sans">Core Conduits</text>
+    <text x="120" y="92" fill="#C4B5FD" font-size="10.5" class="font-mono">PURPLE DATA</text>
+  </g>
+
+  <!-- ==================== ISOMETRIC SKYLINE / SERVER MATRIX ==================== -->
+  <!-- Isometric projection: x_iso = (x - y) * cos(30), y_iso = (x + y) * sin(30) - height -->
+  <g transform="translate(260, -10)">
+
+    <!-- Building at (-3, -2) h=50 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="308,45 334,58 334,108 308,95" fill="#12161F" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="334,58 360,45 360,95 334,108" fill="#0A0D12" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="334,32 360,45 334,58 308,45" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (-3, -1) h=65 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="282,43 308,56 308,121 282,108" fill="#161B22" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="308,56 334,43 334,108 308,121" fill="#0E1217" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="308,30 334,43 308,56 282,43" fill="#21262D" stroke="#30363D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (-2, -2) h=75 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="334,33 360,46 360,121 334,108" fill="#161B22" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="360,46 386,33 386,108 360,121" fill="#0E1217" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="360,20 386,33 360,46 334,33" fill="#21262D" stroke="#30363D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (-3, 0) h=45 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="256,76 282,89 282,134 256,121" fill="#12161F" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="282,89 308,76 308,121 282,134" fill="#0A0D12" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="282,63 308,76 282,89 256,76" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (-2, -1) h=95 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="308,26 334,39 334,134 308,121" fill="#1C2128" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="334,39 360,26 360,121 334,134" fill="#12161F" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="334,13 360,26 334,39 308,26" fill="#FF6B35" stroke="#FFA07A" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (-1, -2) h=110 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="360,11 386,24 386,134 360,121" fill="#1C2128" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="386,24 412,11 412,121 386,134" fill="#12161F" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="386,-2 412,11 386,24 360,11" fill="#FF6B35" stroke="#FFA07A" stroke-width="0.8"/>
+      <line x1="386" y1="48.44444444444444" x2="412" y2="35.44444444444444" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+      <line x1="386" y1="72.88888888888889" x2="412" y2="59.888888888888886" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+      <line x1="386" y1="97.33333333333333" x2="412" y2="84.33333333333333" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+    </g>
+
+    <!-- Building at (-2, 0) h=70 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="282,64 308,77 308,147 282,134" fill="#161B22" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="308,77 334,64 334,134 308,147" fill="#0E1217" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="308,51 334,64 308,77 282,64" fill="#21262D" stroke="#30363D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (-1, -1) h=140 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="334,-6 360,7 360,147 334,134" fill="#1C2128" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="360,7 386,-6 386,134 360,147" fill="#12161F" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="360,-19 386,-6 360,7 334,-6" fill="#FF6B35" stroke="#FFA07A" stroke-width="0.8"/>
+      <line x1="360" y1="38.111111111111114" x2="386" y2="25.111111111111114" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+      <line x1="360" y1="69.22222222222223" x2="386" y2="56.22222222222223" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+      <line x1="360" y1="100.33333333333333" x2="386" y2="87.33333333333333" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+
+      <!-- Antenna Tower -->
+      <line x1="360" y1="-19" x2="360" y2="-37" stroke="#FF6B35" stroke-width="1.2"/>
+      <circle cx="360" cy="-37" r="2.5" fill="#FF6B35" class="city-dot"/>
+    </g>
+
+    <!-- Building at (0, -2) h=135 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="386,-1 412,12 412,147 386,134" fill="#1C2128" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="412,12 438,-1 438,134 412,147" fill="#12161F" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="412,-14 438,-1 412,12 386,-1" fill="#FF6B35" stroke="#FFA07A" stroke-width="0.8"/>
+      <line x1="412" y1="42.0" x2="438" y2="29.0" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+      <line x1="412" y1="72.0" x2="438" y2="59.0" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+      <line x1="412" y1="102.0" x2="438" y2="89.0" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+
+      <!-- Antenna Tower -->
+      <line x1="412" y1="-14" x2="412" y2="-32" stroke="#FF6B35" stroke-width="1.2"/>
+      <circle cx="412" cy="-32" r="2.5" fill="#FF6B35" class="city-dot"/>
+    </g>
+
+    <!-- Building at (-2, 1) h=40 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="256,107 282,120 282,160 256,147" fill="#12161F" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="282,120 308,107 308,147 282,160" fill="#0A0D12" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="282,94 308,107 282,120 256,107" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (-1, 0) h=115 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="308,32 334,45 334,160 308,147" fill="#1C2128" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="334,45 360,32 360,147 334,160" fill="#12161F" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="334,19 360,32 334,45 308,32" fill="#FF6B35" stroke="#FFA07A" stroke-width="0.8"/>
+      <line x1="334" y1="70.55555555555556" x2="360" y2="57.55555555555556" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+      <line x1="334" y1="96.11111111111111" x2="360" y2="83.11111111111111" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+      <line x1="334" y1="121.66666666666667" x2="360" y2="108.66666666666667" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+    </g>
+
+    <!-- Building at (0, -1) h=165 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="360,-18 386,-5 386,160 360,147" fill="#1C2128" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="386,-5 412,-18 412,147 386,160" fill="#12161F" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="386,-31 412,-18 386,-5 360,-18" fill="#FF6B35" stroke="#FFA07A" stroke-width="0.8"/>
+      <line x1="386" y1="31.666666666666664" x2="412" y2="18.666666666666664" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+      <line x1="386" y1="68.33333333333333" x2="412" y2="55.33333333333333" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+      <line x1="386" y1="105.0" x2="412" y2="92.0" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+
+      <!-- Antenna Tower -->
+      <line x1="386" y1="-31" x2="386" y2="-49" stroke="#FF6B35" stroke-width="1.2"/>
+      <circle cx="386" cy="-49" r="2.5" fill="#FF6B35" class="city-dot"/>
+    </g>
+
+    <!-- Building at (1, -2) h=95 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="412,52 438,65 438,160 412,147" fill="#1A1F2C" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="438,65 464,52 464,147 438,160" fill="#10131D" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="438,39 464,52 438,65 412,52" fill="#8B5CF6" stroke="#C4B5FD" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (-1, 1) h=55 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="282,105 308,118 308,173 282,160" fill="#161B22" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="308,118 334,105 334,160 308,173" fill="#0E1217" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="308,92 334,105 308,118 282,105" fill="#21262D" stroke="#30363D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (0, 0) h=130 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="334,30 360,43 360,173 334,160" fill="#1C2128" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="360,43 386,30 386,160 360,173" fill="#12161F" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="360,17 386,30 360,43 334,30" fill="#FF6B35" stroke="#FFA07A" stroke-width="0.8"/>
+      <line x1="360" y1="71.88888888888889" x2="386" y2="58.888888888888886" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+      <line x1="360" y1="100.77777777777777" x2="386" y2="87.77777777777777" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+      <line x1="360" y1="129.66666666666669" x2="386" y2="116.66666666666669" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+
+      <!-- Antenna Tower -->
+      <line x1="360" y1="17" x2="360" y2="-1" stroke="#FF6B35" stroke-width="1.2"/>
+      <circle cx="360" cy="-1" r="2.5" fill="#FF6B35" class="city-dot"/>
+    </g>
+
+    <!-- Building at (1, -1) h=120 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="386,40 412,53 412,173 386,160" fill="#1C2128" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="412,53 438,40 438,160 412,173" fill="#12161F" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="412,27 438,40 412,53 386,40" fill="#FF6B35" stroke="#FFA07A" stroke-width="0.8"/>
+      <line x1="412" y1="79.66666666666667" x2="438" y2="66.66666666666667" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+      <line x1="412" y1="106.33333333333334" x2="438" y2="93.33333333333334" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+      <line x1="412" y1="133.0" x2="438" y2="120.0" stroke="#FF8E53" stroke-width="0.5" stroke-opacity="0.4"/>
+    </g>
+
+    <!-- Building at (2, -2) h=60 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="438,100 464,113 464,173 438,160" fill="#161B22" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="464,113 490,100 490,160 464,173" fill="#0E1217" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="464,87 490,100 464,113 438,100" fill="#21262D" stroke="#30363D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (0, 1) h=75 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="308,98 334,111 334,186 308,173" fill="#161B22" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="334,111 360,98 360,173 334,186" fill="#0E1217" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="334,85 360,98 334,111 308,98" fill="#21262D" stroke="#30363D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (1, 0) h=85 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="360,88 386,101 386,186 360,173" fill="#1A1F2C" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="386,101 412,88 412,173 386,186" fill="#10131D" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="386,75 412,88 386,101 360,88" fill="#8B5CF6" stroke="#C4B5FD" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (2, -1) h=80 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="412,93 438,106 438,186 412,173" fill="#161B22" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="438,106 464,93 464,173 438,186" fill="#0E1217" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="438,80 464,93 438,106 412,93" fill="#21262D" stroke="#30363D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (3, -2) h=40 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="464,133 490,146 490,186 464,173" fill="#12161F" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="490,146 516,133 516,173 490,186" fill="#0A0D12" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="490,120 516,133 490,146 464,133" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (1, 1) h=50 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="334,136 360,149 360,199 334,186" fill="#12161F" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="360,149 386,136 386,186 360,199" fill="#0A0D12" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="360,123 386,136 360,149 334,136" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (2, 0) h=65 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="386,121 412,134 412,199 386,186" fill="#161B22" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="412,134 438,121 438,186 412,199" fill="#0E1217" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="412,108 438,121 412,134 386,121" fill="#21262D" stroke="#30363D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (3, -1) h=55 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="438,131 464,144 464,199 438,186" fill="#161B22" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="464,144 490,131 490,186 464,199" fill="#0E1217" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="464,118 490,131 464,144 438,131" fill="#21262D" stroke="#30363D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (2, 1) h=30 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="360,169 386,182 386,212 360,199" fill="#12161F" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="386,182 412,169 412,199 386,212" fill="#0A0D12" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="386,156 412,169 386,182 360,169" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Building at (3, 0) h=35 -->
+    <g>
+      <!-- Left Face -->
+      <polygon points="412,164 438,177 438,212 412,199" fill="#12161F" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Right Face -->
+      <polygon points="438,177 464,164 464,199 438,212" fill="#0A0D12" stroke="#21262D" stroke-width="0.6"/>
+      <!-- Top Face -->
+      <polygon points="438,151 464,164 438,177 412,164" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Animated Telemetry Photons -->
+    <line x1="360" y1="20" x2="360" y2="4" stroke="#FF6B35" stroke-width="2" stroke-linecap="round" class="beam-1"/>
+    <line x1="334" y1="45" x2="334" y2="28" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" class="beam-2"/>
+    <line x1="386" y1="55" x2="386" y2="38" stroke="#FF8E53" stroke-width="1.8" stroke-linecap="round" class="beam-3"/>
+    <line x1="308" y1="75" x2="308" y2="60" stroke="#C4B5FD" stroke-width="1.8" stroke-linecap="round" class="beam-4"/>
+  </g>
+</svg>

@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" width="100%" height="430" style="background: transparent;">
+  <defs>
+    <linearGradient id="projBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1217"/>
+      <stop offset="50%" stop-color="#12161F"/>
+      <stop offset="100%" stop-color="#0A0D12"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161B22"/>
+      <stop offset="100%" stop-color="#0F141C"/>
+    </linearGradient>
+
+    <pattern id="projGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#21262D" stroke-width="0.5" stroke-opacity="0.3"/>
+    </pattern>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <style>
+    .font-sans {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .font-mono {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    }
+  </style>
+
+  <!-- Base Background -->
+  <rect x="2" y="2" width="916" height="426" rx="14" fill="url(#projBg)"/>
+  <rect x="2" y="2" width="916" height="426" rx="14" fill="url(#projGrid)"/>
+  <rect x="2" y="2" width="916" height="426" rx="14" fill="none" stroke="#21262D" stroke-width="1.2"/>
+
+  <!-- Showcase Header -->
+  <g transform="translate(40, 36)">
+    <rect x="0" y="0" width="220" height="24" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+    <circle cx="12" cy="12" r="3.5" fill="#FF6B35"/>
+    <text x="24" y="16" fill="#C9D1D9" font-size="10.5" class="font-mono" font-weight="600" letter-spacing="1">FEATURED ARCHITECTURE</text>
+  </g>
+  <text x="40" y="78" fill="#F0F6FC" font-size="20" class="font-sans" font-weight="700">Engineering Project Showcase</text>
+  <text x="40" y="96" fill="#8B949E" font-size="12" class="font-sans">Production systems, multi-client applications, and enterprise workflow solutions</text>
+
+  <!-- ==================== PROJECT CARD 1: HOSTEL HUNT ==================== -->
+  <g transform="translate(30, 115)">
+    <rect x="0" y="0" width="415" height="135" rx="10" fill="url(#cardGrad1)" stroke="#30363D" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <!-- Left burnt orange accent bar -->
+    <path d="M 0 6 L 0 129" stroke="#FF6B35" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Category Tag & Status -->
+    <rect x="18" y="14" width="130" height="18" rx="4" fill="#0D1117" stroke="#FF6B35" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="24" y="27" fill="#FF8E53" font-size="9" class="font-mono" font-weight="700">MULTI-CLIENT PLATFORM</text>
+    <circle cx="395" cy="22" r="3" fill="#3FB950"/>
+
+    <!-- Project Title -->
+    <text x="18" y="52" fill="#F0F6FC" font-size="15" class="font-sans" font-weight="700">Hostel Hunt</text>
+    <!-- Description -->
+    <text x="18" y="70" fill="#8B949E" font-size="11" class="font-sans">Accommodation discovery &amp; booking platform featuring real-time search,</text>
+    <text x="18" y="85" fill="#8B949E" font-size="11" class="font-sans">wishlists, PG filtering, and role-based administration portal.</text>
+
+    <!-- Tech Badges -->
+    <g transform="translate(18, 102)">
+      <rect x="0" y="0" width="55" height="18" rx="4" fill="#1C2128"/>
+      <text x="27" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">Flutter</text>
+
+      <rect x="62" y="0" width="76" height="18" rx="4" fill="#1C2128"/>
+      <text x="100" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">Django REST</text>
+
+      <rect x="145" y="0" width="68" height="18" rx="4" fill="#1C2128"/>
+      <text x="179" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">PostgreSQL</text>
+
+      <rect x="220" y="0" width="60" height="18" rx="4" fill="#1C2128"/>
+      <text x="250" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">JWT Auth</text>
+    </g>
+  </g>
+
+  <!-- ==================== PROJECT CARD 2: NXDESK / NXERP ==================== -->
+  <g transform="translate(475, 115)">
+    <rect x="0" y="0" width="415" height="135" rx="10" fill="url(#cardGrad1)" stroke="#30363D" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <!-- Left purple accent bar -->
+    <path d="M 0 6 L 0 129" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Category Tag & Status -->
+    <rect x="18" y="14" width="135" height="18" rx="4" fill="#0D1117" stroke="#8B5CF6" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="24" y="27" fill="#C4B5FD" font-size="9" class="font-mono" font-weight="700">ENTERPRISE ERP &amp; DESK</text>
+    <circle cx="395" cy="22" r="3" fill="#8B5CF6"/>
+
+    <!-- Project Title -->
+    <text x="18" y="52" fill="#F0F6FC" font-size="15" class="font-sans" font-weight="700">NXdesk / NXERP</text>
+    <!-- Description -->
+    <text x="18" y="70" fill="#8B949E" font-size="11" class="font-sans">Enterprise helpdesk &amp; ERP solution built on multi-app Frappe architecture,</text>
+    <text x="18" y="85" fill="#8B949E" font-size="11" class="font-sans">featuring granular RBAC, ticket lifecycles, and custom Vue.js workflows.</text>
+
+    <!-- Tech Badges -->
+    <g transform="translate(18, 102)">
+      <rect x="0" y="0" width="55" height="18" rx="4" fill="#1C2128"/>
+      <text x="27" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">Frappe</text>
+
+      <rect x="62" y="0" width="60" height="18" rx="4" fill="#1C2128"/>
+      <text x="92" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">ERPNext</text>
+
+      <rect x="129" y="0" width="55" height="18" rx="4" fill="#1C2128"/>
+      <text x="156" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">Python</text>
+
+      <rect x="191" y="0" width="50" height="18" rx="4" fill="#1C2128"/>
+      <text x="216" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">Vue.js</text>
+
+      <rect x="248" y="0" width="45" height="18" rx="4" fill="#1C2128"/>
+      <text x="270" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">RBAC</text>
+    </g>
+  </g>
+
+  <!-- ==================== PROJECT CARD 3: AARUPA MATRIX ==================== -->
+  <g transform="translate(30, 265)">
+    <rect x="0" y="0" width="415" height="135" rx="10" fill="url(#cardGrad1)" stroke="#30363D" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <!-- Left cyan accent bar -->
+    <path d="M 0 6 L 0 129" stroke="#58A6FF" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Category Tag & Status -->
+    <rect x="18" y="14" width="130" height="18" rx="4" fill="#0D1117" stroke="#58A6FF" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="24" y="27" fill="#79C0FF" font-size="9" class="font-mono" font-weight="700">ACADEMIC PORTAL SYSTEM</text>
+    <circle cx="395" cy="22" r="3" fill="#58A6FF"/>
+
+    <!-- Project Title -->
+    <text x="18" y="52" fill="#F0F6FC" font-size="15" class="font-sans" font-weight="700">Aarupa Matrix</text>
+    <!-- Description -->
+    <text x="18" y="70" fill="#8B949E" font-size="11" class="font-sans">Comprehensive student portal frontend interface facilitating course</text>
+    <text x="18" y="85" fill="#8B949E" font-size="11" class="font-sans">information access, administrative updates, and streamlined student UI.</text>
+
+    <!-- Tech Badges -->
+    <g transform="translate(18, 102)">
+      <rect x="0" y="0" width="60" height="18" rx="4" fill="#1C2128"/>
+      <text x="30" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">Web UI</text>
+
+      <rect x="67" y="0" width="70" height="18" rx="4" fill="#1C2128"/>
+      <text x="102" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">JavaScript</text>
+
+      <rect x="144" y="0" width="68" height="18" rx="4" fill="#1C2128"/>
+      <text x="178" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">REST APIs</text>
+
+      <rect x="219" y="0" width="65" height="18" rx="4" fill="#1C2128"/>
+      <text x="251" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">Dashboard</text>
+    </g>
+  </g>
+
+  <!-- ==================== PROJECT CARD 4: DEVELOPER PORTFOLIO ==================== -->
+  <g transform="translate(475, 265)">
+    <rect x="0" y="0" width="415" height="135" rx="10" fill="url(#cardGrad1)" stroke="#30363D" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <!-- Left green accent bar -->
+    <path d="M 0 6 L 0 129" stroke="#3FB950" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Category Tag & Status -->
+    <rect x="18" y="14" width="135" height="18" rx="4" fill="#0D1117" stroke="#3FB950" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="24" y="27" fill="#7EE787" font-size="9" class="font-mono" font-weight="700">ENGINEERING PORTFOLIO</text>
+    <circle cx="395" cy="22" r="3" fill="#3FB950"/>
+
+    <!-- Project Title -->
+    <text x="18" y="52" fill="#F0F6FC" font-size="15" class="font-sans" font-weight="700">Rohan D. Portfolio</text>
+    <!-- Description -->
+    <text x="18" y="70" fill="#8B949E" font-size="11" class="font-sans">Personal engineering portfolio presenting architectural capabilities,</text>
+    <text x="18" y="85" fill="#8B949E" font-size="11" class="font-sans">system designs, project repositories, and technical journey.</text>
+
+    <!-- Tech Badges -->
+    <g transform="translate(18, 102)">
+      <rect x="0" y="0" width="70" height="18" rx="4" fill="#1C2128"/>
+      <text x="35" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">JavaScript</text>
+
+      <rect x="77" y="0" width="70" height="18" rx="4" fill="#1C2128"/>
+      <text x="112" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">Modern UI</text>
+
+      <rect x="154" y="0" width="70" height="18" rx="4" fill="#1C2128"/>
+      <text x="189" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">Responsive</text>
+
+      <rect x="231" y="0" width="60" height="18" rx="4" fill="#1C2128"/>
+      <text x="261" y="12" text-anchor="middle" fill="#C9D1D9" font-size="9.5" class="font-mono">GitHub</text>
+    </g>
+  </g>
+</svg>

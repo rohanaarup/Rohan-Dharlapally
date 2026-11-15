@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 160" width="100%" height="160" style="background: transparent;">
+  <defs>
+    <linearGradient id="footerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1217"/>
+      <stop offset="50%" stop-color="#12161F"/>
+      <stop offset="100%" stop-color="#0A0D12"/>
+    </linearGradient>
+
+    <linearGradient id="footerBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B35" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#30363D" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <pattern id="footerGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#21262D" stroke-width="0.5" stroke-opacity="0.25"/>
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes footerPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+    .footer-dot {
+      animation: footerPulse 2.5s infinite ease-in-out;
+    }
+    .font-sans {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .font-mono {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    }
+  </style>
+
+  <!-- Frame Base -->
+  <rect x="2" y="2" width="916" height="156" rx="12" fill="url(#footerBg)"/>
+  <rect x="2" y="2" width="916" height="156" rx="12" fill="url(#footerGrid)"/>
+  <rect x="2" y="2" width="916" height="156" rx="12" fill="none" stroke="url(#footerBorder)" stroke-width="1.2"/>
+
+  <!-- Left Side: Engineering Sign-off -->
+  <g transform="translate(36, 28)">
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="180" height="22" rx="11" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+      <circle cx="11" cy="11" r="3.5" fill="#3FB950" class="footer-dot"/>
+      <text x="22" y="15" fill="#C9D1D9" font-size="10" class="font-mono" font-weight="600">CONNECTED // AVAILABLE</text>
+    </g>
+
+    <text x="0" y="52" fill="#F0F6FC" font-size="18" class="font-sans" font-weight="700">Let's Build Resilient Systems Together</text>
+    <text x="0" y="74" fill="#8B949E" font-size="12" class="font-sans">
+      Open for backend engineering, full-stack application development, and technical collaborations.
+    </text>
+    <text x="0" y="96" fill="#6E7681" font-size="10.5" class="font-mono">
+      LOCATION: HYDERABAD, IN · TIMEZONE: IST (UTC+05:30)
+    </text>
+  </g>
+
+  <!-- Right Side: Terminal Status Box -->
+  <g transform="translate(580, 24)">
+    <rect x="0" y="0" width="304" height="110" rx="8" fill="#0A0D12" stroke="#21262D" stroke-width="1"/>
+    <!-- Terminal header -->
+    <rect x="0" y="0" width="304" height="24" rx="8" fill="#161B22"/>
+    <rect x="0" y="16" width="304" height="8" fill="#161B22"/>
+    <circle cx="14" cy="12" r="3.5" fill="#484F58"/>
+    <circle cx="26" cy="12" r="3.5" fill="#30363D"/>
+    <circle cx="38" cy="12" r="3.5" fill="#21262D"/>
+    <text x="56" y="16" fill="#8B949E" font-size="10" class="font-mono">bash - rohan@system: ~</text>
+
+    <!-- Terminal code content -->
+    <text x="14" y="44" fill="#FF8E53" font-size="10.5" class="font-mono">$ git status</text>
+    <text x="14" y="62" fill="#8B949E" font-size="10.5" class="font-mono">On branch main · Up to date</text>
+    <text x="14" y="80" fill="#3FB950" font-size="10.5" class="font-mono">ready to build scalable solutions</text>
+    <text x="14" y="98" fill="#8B5CF6" font-size="10" class="font-mono">&gt; ping rohan.dharlapally</text>
+  </g>
+</svg>
